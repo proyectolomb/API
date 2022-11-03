@@ -1,0 +1,44 @@
+F:\API Rest LOMB\API Rest LOMB\bin\Debug\netcoreapp3.1\appsettings.Development.json
+F:\API Rest LOMB\API Rest LOMB\bin\Debug\netcoreapp3.1\appsettings.json
+F:\API Rest LOMB\API Rest LOMB\bin\Debug\netcoreapp3.1\API Rest LOMB.exe
+F:\API Rest LOMB\API Rest LOMB\bin\Debug\netcoreapp3.1\API Rest LOMB.deps.json
+F:\API Rest LOMB\API Rest LOMB\bin\Debug\netcoreapp3.1\API Rest LOMB.runtimeconfig.json
+F:\API Rest LOMB\API Rest LOMB\bin\Debug\netcoreapp3.1\API Rest LOMB.runtimeconfig.dev.json
+F:\API Rest LOMB\API Rest LOMB\bin\Debug\netcoreapp3.1\API Rest LOMB.dll
+F:\API Rest LOMB\API Rest LOMB\bin\Debug\netcoreapp3.1\API Rest LOMB.pdb
+F:\API Rest LOMB\API Rest LOMB\obj\Debug\netcoreapp3.1\API Rest LOMB.GeneratedMSBuildEditorConfig.editorconfig
+F:\API Rest LOMB\API Rest LOMB\obj\Debug\netcoreapp3.1\API Rest LOMB.AssemblyInfoInputs.cache
+F:\API Rest LOMB\API Rest LOMB\obj\Debug\netcoreapp3.1\API Rest LOMB.AssemblyInfo.cs
+F:\API Rest LOMB\API Rest LOMB\obj\Debug\netcoreapp3.1\API Rest LOMB.csproj.CoreCompileInputs.cache
+F:\API Rest LOMB\API Rest LOMB\obj\Debug\netcoreapp3.1\API Rest LOMB.MvcApplicationPartsAssemblyInfo.cache
+F:\API Rest LOMB\API Rest LOMB\obj\Debug\netcoreapp3.1\staticwebassets\API Rest LOMB.StaticWebAssets.Manifest.cache
+F:\API Rest LOMB\API Rest LOMB\obj\Debug\netcoreapp3.1\staticwebassets\API Rest LOMB.StaticWebAssets.xml
+F:\API Rest LOMB\API Rest LOMB\obj\Debug\netcoreapp3.1\scopedcss\bundle\API Rest LOMB.styles.css
+F:\API Rest LOMB\API Rest LOMB\obj\Debug\netcoreapp3.1\API Rest LOMB.RazorTargetAssemblyInfo.cache
+F:\API Rest LOMB\API Rest LOMB\obj\Debug\netcoreapp3.1\API Rest LOMB.dll
+F:\API Rest LOMB\API Rest LOMB\obj\Debug\netcoreapp3.1\API Rest LOMB.pdb
+F:\API Rest LOMB\API Rest LOMB\obj\Debug\netcoreapp3.1\API Rest LOMB.genruntimeconfig.cache
+F:\API Rest LOMB\API Rest LOMB\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+F:\API Rest LOMB\API Rest LOMB\obj\Debug\netcoreapp3.1\API Rest LOMB.csproj.AssemblyReference.cache
+F:\API Rest LOMB\API Rest LOMB\obj\Debug\netcoreapp3.1\API Rest LOMB.csproj.CopyComplete
+F:\API Rest LOMB\API Rest LOMB\bin\Debug\netcoreapp3.1\AccesoDatos.deps.json
+F:\API Rest LOMB\API Rest LOMB\bin\Debug\netcoreapp3.1\AccesoDatos.runtimeconfig.json
+F:\API Rest LOMB\API Rest LOMB\bin\Debug\netcoreapp3.1\AccesoDatos.runtimeconfig.dev.json
+F:\API Rest LOMB\API Rest LOMB\bin\Debug\netcoreapp3.1\AccesoDatos.exe
+F:\API Rest LOMB\API Rest LOMB\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+F:\API Rest LOMB\API Rest LOMB\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+F:\API Rest LOMB\API Rest LOMB\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.FileExtensions.dll
+F:\API Rest LOMB\API Rest LOMB\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Json.dll
+F:\API Rest LOMB\API Rest LOMB\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.UserSecrets.dll
+F:\API Rest LOMB\API Rest LOMB\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+F:\API Rest LOMB\API Rest LOMB\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Physical.dll
+F:\API Rest LOMB\API Rest LOMB\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileSystemGlobbing.dll
+F:\API Rest LOMB\API Rest LOMB\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+F:\API Rest LOMB\API Rest LOMB\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+F:\API Rest LOMB\API Rest LOMB\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+F:\API Rest LOMB\API Rest LOMB\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+F:\API Rest LOMB\API Rest LOMB\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+F:\API Rest LOMB\API Rest LOMB\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+F:\API Rest LOMB\API Rest LOMB\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+F:\API Rest LOMB\API Rest LOMB\bin\Debug\netcoreapp3.1\AccesoDatos.dll
+F:\API Rest LOMB\API Rest LOMB\bin\Debug\netcoreapp3.1\AccesoDatos.pdb
