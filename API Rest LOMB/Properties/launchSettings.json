@@ -19,7 +19,7 @@
     },
     "API_Rest_LOMB": {
       "commandName": "Project",
-      "launchBrowser": true,
+      "launchBrowser": false,
       "launchUrl": "misco",
       "applicationUrl": "http://10.2.2.15:5000",
       "environmentVariables": {
