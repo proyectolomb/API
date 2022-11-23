@@ -43,5 +43,6 @@ namespace API_Rest_LOMB.Controllers
             AccesoDatos.Libro libro = JsonConvert.DeserializeObject<AccesoDatos.Libro>(json);
             return AccesoDatos.Libro.Create(libro);       
         }
+
     }
 }

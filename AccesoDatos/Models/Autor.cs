@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AccesoDatos.Models;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Text;
@@ -9,6 +10,10 @@ namespace AccesoDatos
     {
         public int id;
         public string nombre;
+        public string paisOrigen;
+        public List<Categoria> categorias;
+        public Editorial editorial;
+        
 
         public static SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
 

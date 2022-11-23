@@ -81,19 +81,21 @@ namespace AccesoDatos
                         }
                     }
                 }
+            
                 foreach (Libro libro in lista)
                 {
                     sql = String.Format("SELECT Categoria.Id, Categoria.Nombre FROM Categoria JOIN Libro_Categoria ON Categoria.Id = Libro_Categoria.Categoria WHERE Libro_Categoria.Libro='{0}'", libro.isbn);
-                    using (SqlCommand c = new SqlCommand(sql, connection))
+                    using (SqlCommand c2 = new SqlCommand(sql, connection))
                     {
-                        using (SqlDataReader r = c.ExecuteReader())
+                        using (SqlDataReader r2 = c2.ExecuteReader())
                         {
-                            while (r.Read())
+                            while (r2.Read())
                             {
+                                libro.categorias = new List<Categoria>();
                                 libro.categorias.Add(new Categoria
                                 {
-                                    id = r.GetInt32(0),
-                                    nombre = r.GetString(1)
+                                    id = r2.GetInt32(0),
+                                    nombre = r2.GetString(1)
                                 });
                             }
                         }
@@ -233,11 +235,11 @@ namespace AccesoDatos
                     {
                         while (r.Read())
                         {
-                            l.categorias.Add(new Categoria
-                            {
-                                id = r.GetInt32(0),
-                                nombre = r.GetString(1)
-                            });
+                            Categoria ca = new Categoria();
+                            l.categorias = new List<Categoria>();
+                            ca.id = r.GetInt32(0);
+                            ca.nombre = r.GetString(1);
+                            if(ca != null && l != null) l.categorias.Add(ca);
                         }
                     }
                 }
