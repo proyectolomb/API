@@ -11,7 +11,7 @@ namespace AccesoDatos
         public int id;
         public string nombre;
         public string paisOrigen;
-        public List<Categoria> categorias;
+        public List<Categoria> categorias;  
         public Editorial editorial;
         
 
