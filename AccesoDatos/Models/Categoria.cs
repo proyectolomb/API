@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Text;
@@ -12,6 +12,7 @@ namespace AccesoDatos.Models
 
         public static SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
 
+        // Método para devolver todas las categorías de la base de datos
         public static List<Categoria> GetAll()
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -44,7 +45,8 @@ namespace AccesoDatos.Models
             }
             return lista;
         }
-
+        
+        // Método que devuelve una categoría por su id
         public static Categoria GetById(long id)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -76,7 +78,8 @@ namespace AccesoDatos.Models
             }
             return null;
         }
-
+        
+        // Método que devuelve una lista de categorías por su nombre
         public static List<Categoria> GetByName(string name)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -108,7 +111,8 @@ namespace AccesoDatos.Models
             }
             return lista;
         }
-
+        
+        // Método para crear una categoría
         public static bool Create(Categoria e)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -138,6 +142,7 @@ namespace AccesoDatos.Models
             }
         }
 
+        // Método para borrar una categoría por su id
         public static bool Delete(int id)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -166,7 +171,9 @@ namespace AccesoDatos.Models
                 }
             }
         }
-
+        
+        
+        // Método para actualizar una categoría
         public static bool Update(Categoria e)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
