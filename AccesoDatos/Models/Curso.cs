@@ -11,7 +11,8 @@ namespace AccesoDatos
         public string nombre { get; set; }
 
         public static SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-
+        
+        // Método que devuelve una lista de todos los cursos de la base de datos
         public static List<Curso> GetAll()
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -44,7 +45,9 @@ namespace AccesoDatos
             }
             return lista;
         }
-
+        
+        
+        // Método que devuelve un curso por su ID
         public static Curso GetById(long id)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -77,6 +80,7 @@ namespace AccesoDatos
             return null;
         }
 
+        // Método que devuelve una lista de cursos por su nombre
         public static List<Curso> GetByName(string name)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -109,6 +113,8 @@ namespace AccesoDatos
             return lista;
         }
 
+        
+        // Método que crea un curso
         public static bool Create(Curso e)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -138,6 +144,7 @@ namespace AccesoDatos
             }
         }
 
+        // Método que borra un curso por su id
         public static bool Delete(int id)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -167,6 +174,8 @@ namespace AccesoDatos
             }
         }
 
+        
+        // Método que actualiza un curso
         public static bool Update(Curso e)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
