@@ -12,6 +12,7 @@ namespace AccesoDatos
 
         public static SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
 
+        // Método que devuelve todas las editoriales
         public static List<Editorial> GetAll()
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -45,6 +46,7 @@ namespace AccesoDatos
             return lista;
         }
 
+        // Método que devuelve una editorial por su id
         public static Editorial GetById(long id)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -77,6 +79,8 @@ namespace AccesoDatos
             return null;
         }
 
+        
+        // Método que devuelve una lista de editoriales según su nombre
         public static List<Editorial> GetByName(string name)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -109,6 +113,7 @@ namespace AccesoDatos
             return lista;
         }
 
+        // Método que crea una editorial
         public static bool Create(Editorial e)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -138,6 +143,7 @@ namespace AccesoDatos
             }
         }
 
+        // Método que borra una editorial
         public static bool Delete(int id)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -167,6 +173,7 @@ namespace AccesoDatos
             }
         }
 
+        // Método que actualiza una editorial
         public static bool Update(Editorial e)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
