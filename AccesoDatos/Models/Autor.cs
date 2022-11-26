@@ -16,7 +16,8 @@ namespace AccesoDatos
         
 
         public static SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-
+        
+        // Método que devuelve todos los autores de la base de datos.
         public static List<Autor> GetAll()
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -49,7 +50,9 @@ namespace AccesoDatos
             }
             return lista;
         }
-
+        
+        
+        // Método que devuelve un autor por su id
         public static Autor GetById(long id)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -81,7 +84,9 @@ namespace AccesoDatos
             }
             return null;
         }
-
+        
+        
+        // Método  que devuelve una lista de autores por el nombre del autor
         public static List<Autor> GetByName(string name)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -114,6 +119,7 @@ namespace AccesoDatos
             return lista;
         }
 
+        // Método para crear un autor
         public static bool Create(Autor e)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -143,6 +149,7 @@ namespace AccesoDatos
             }
         }
 
+        // Método para borrar un autor por su id
         public static bool Delete(int id)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -172,6 +179,7 @@ namespace AccesoDatos
             }
         }
 
+        // Método para actualizar un id
         public static bool Update(Autor e)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
