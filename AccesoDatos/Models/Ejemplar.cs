@@ -15,6 +15,7 @@ namespace AccesoDatos.Models
 
         public static SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
 
+        // Método que devuelve todos los ejemplares
         public static List<Ejemplar> GetAll()
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -48,6 +49,7 @@ namespace AccesoDatos.Models
             return lista;
         }
 
+        // Método que devuelve un ejemplar por su isbn
         public static List<Ejemplar> GetByISBN(string isbn)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
