@@ -13,6 +13,7 @@ using API_Rest_LOMB.Utils;
 
 namespace API_Rest_LOMB.Controllers
 {
+    // Ruta base api/v1/encargado
     [ApiController]
     [Route("api/v1/[controller]")]
     public class EncargadoController : ControllerBase
@@ -24,6 +25,8 @@ namespace API_Rest_LOMB.Controllers
             _logger = logger;
 
         }
+        
+        // api/v1/encargado/byname?name=x
         [HttpGet("byname")]
         public IActionResult GetByName()
         { 
@@ -31,13 +34,16 @@ namespace API_Rest_LOMB.Controllers
             return Ok(JsonConvert.SerializeObject(encargados, Formatting.None, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, Formatting = Formatting.Indented }));
         }
 
+
+        // api/v1/encargado
         [HttpGet]
         public IActionResult GetAll()
         {
             var list = AccesoDatos.Encargado.GetAll();
             return Ok(JsonConvert.SerializeObject(list, Formatting.None, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, Formatting = Formatting.Indented }));
         }
-
+        
+        // api/v1/encargado/1
         [HttpGet("{id}")]
         public IActionResult GetById(long id)
         {
@@ -46,6 +52,7 @@ namespace API_Rest_LOMB.Controllers
             else return BadRequest("ID no válido");
         }
         
+        // api/v1/encargado/create
         [HttpPost("create")]
         public async Task<bool> Create()
         {
@@ -55,12 +62,14 @@ namespace API_Rest_LOMB.Controllers
             return AccesoDatos.Encargado.Create(encargado);
         }
     
+        // api/v1/encargado/delete/1
         [HttpDelete("delete/{id}")]
         public bool Delete(int id)
         {
             return AccesoDatos.Encargado.Delete(id);
         }
 
+        // api/v1/encargado/update/1
         [HttpPut("update/{id}")]
         public async Task<bool> Update(int id)
         {
@@ -68,7 +77,8 @@ namespace API_Rest_LOMB.Controllers
             AccesoDatos.Encargado encargado = JsonConvert.DeserializeObject<AccesoDatos.Encargado>(json); 
             return AccesoDatos.Encargado.Update(encargado);
         }
-
+        
+        // api/v1/encargado/check
         [HttpGet("check")]
         public async Task<bool> CheckPassword()
         {
