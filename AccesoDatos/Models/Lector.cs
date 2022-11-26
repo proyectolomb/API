@@ -15,6 +15,8 @@ namespace AccesoDatos.Models
         public string curso_departamento { get; set; }
 
         public static SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+        
+        // Método que devuelve una lista con todos los lectores
         public static List<Lector> GetAll()
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -52,6 +54,7 @@ namespace AccesoDatos.Models
 
         }
 
+        // Método auxiliar que genera un número entre 0 y 5 para asignar un curso o un departamento a un lector
         public static string getCursoOrDepartamento()
         {
             var seed = Environment.TickCount;
