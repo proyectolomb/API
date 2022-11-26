@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace API_Rest_LOMB.Controllers
 {
+    // Ruta base api/v1/idioma
     [Route("api/v1/[controller]")]
     [ApiController]
     public class IdiomaController : ControllerBase
@@ -21,6 +22,8 @@ namespace API_Rest_LOMB.Controllers
             _logger = logger;
 
         }
+        
+        // api/v1/idioma/byname?name=X
         [HttpGet("byname")]
         public IActionResult GetByName()
         {
@@ -28,6 +31,7 @@ namespace API_Rest_LOMB.Controllers
             return Ok(JsonConvert.SerializeObject(Idiomas, Formatting.None, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, Formatting = Formatting.Indented }));
         }
 
+        // api/v1/idioma
         [HttpGet]
         public IActionResult GetAll()
         {
@@ -35,6 +39,7 @@ namespace API_Rest_LOMB.Controllers
             return Ok(JsonConvert.SerializeObject(list, Formatting.None, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, Formatting = Formatting.Indented }));
         }
 
+        // api/v1/idioma/1
         [HttpGet("{id}")]
         public IActionResult GetById(long id)
         {
@@ -43,6 +48,7 @@ namespace API_Rest_LOMB.Controllers
             else return BadRequest("ID no válido");
         }
 
+        // api/v1/idioma/create
         [HttpPost("create")]
         public async Task<bool> Create()
         {
@@ -51,12 +57,14 @@ namespace API_Rest_LOMB.Controllers
             return AccesoDatos.Idioma.Create(Idioma);
         }
 
+        // api/v1/idioma/delete/1
         [HttpDelete("delete/{id}")]
         public bool Delete(int id)
         {
             return AccesoDatos.Idioma.Delete(id);
         }
-
+        
+        // api/v1/idioma/update/1
         [HttpPut("update/{id}")]
         public async Task<bool> Update(int id)
         {
