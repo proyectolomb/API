@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace API_Rest_LOMB.Controllers
 {
+    // Ruta base api/v1/curso
     [Route("api/v1/[controller]")]
     [ApiController]
     public class CursoController : ControllerBase
@@ -21,6 +22,8 @@ namespace API_Rest_LOMB.Controllers
             _logger = logger;
 
         }
+        
+        // api/v1/curso/byname?name=x
         [HttpGet("byname")]
         public IActionResult GetByName()
         {
@@ -28,13 +31,15 @@ namespace API_Rest_LOMB.Controllers
             return Ok(JsonConvert.SerializeObject(Cursos, Formatting.None, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, Formatting = Formatting.Indented }));
         }
 
+        // api/v1/curso
         [HttpGet]
         public IActionResult GetAll()
         {
             var list = AccesoDatos.Curso.GetAll();
             return Ok(JsonConvert.SerializeObject(list, Formatting.None, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, Formatting = Formatting.Indented }));
         }
-
+        
+        // api/v1/curso/1
         [HttpGet("{id}")]
         public IActionResult GetById(long id)
         {
@@ -43,6 +48,7 @@ namespace API_Rest_LOMB.Controllers
             else return BadRequest("ID no válido");
         }
 
+        // api/v1/curso/create
         [HttpPost("create")]
         public async Task<bool> Create()
         {
@@ -51,12 +57,14 @@ namespace API_Rest_LOMB.Controllers
             return AccesoDatos.Curso.Create(Curso);
         }
 
+        // api/v1/curso/delete/1
         [HttpDelete("delete/{id}")]
         public bool Delete(int id)
         {
             return AccesoDatos.Curso.Delete(id);
         }
 
+        // api/v1/curso/update/1
         [HttpPut("update/{id}")]
         public async Task<bool> Update(int id)
         {
