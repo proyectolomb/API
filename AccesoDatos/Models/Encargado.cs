@@ -10,10 +10,11 @@ namespace AccesoDatos
         public long id;
         public string nombre;
         public string nombre_usuario;
-        public string contraseña;
+        public string contraseÃ±a;
         public Boolean is_admin;
         public static SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
 
+        // MÃ©todo que devuelve todos los encargados
         public static List<Encargado> GetAll()
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -38,7 +39,7 @@ namespace AccesoDatos
                                 id = reader.GetInt32(0),
                                 nombre = reader.GetString(1),
                                 nombre_usuario = reader.GetString(2),
-                                contraseña = reader.GetString(3),
+                                contraseÃ±a = reader.GetString(3),
                                 is_admin = reader.GetBoolean(4)
                             };
                             lista.Add(e);
@@ -49,6 +50,7 @@ namespace AccesoDatos
             return lista;
         }
 
+        // MÃ©todo que devuelve un encargado por su id
         public static Encargado GetById(long id)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -72,7 +74,7 @@ namespace AccesoDatos
                                 id = reader.GetInt32(0),
                                 nombre = reader.GetString(1),
                                 nombre_usuario = reader.GetString(2),
-                                contraseña = reader.GetString(3),
+                                contraseÃ±a = reader.GetString(3),
                                 is_admin = reader.GetBoolean(4)
                             };
                             return e;
@@ -84,6 +86,7 @@ namespace AccesoDatos
             return null;
         }
 
+        // MÃ©todo que devuelve una lista de encargados por su nombre
         public static List<Encargado> GetByName(string name)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -108,7 +111,7 @@ namespace AccesoDatos
                                 id = reader.GetInt32(0),
                                 nombre = reader.GetString(1),
                                 nombre_usuario = reader.GetString(2),
-                                contraseña = reader.GetString(3),
+                                contraseÃ±a = reader.GetString(3),
                                 is_admin = reader.GetBoolean(4)
                             };
                             lista.Add(e);
@@ -119,17 +122,18 @@ namespace AccesoDatos
             return lista;
         }
 
+        // MÃ©todo que crea un encargado
         public static bool Create(Encargado e)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
             builder.UserID = "Fran";
             builder.Password = "";
             builder.InitialCatalog = "biblioteca_comercio";
-            // e.contraseña = Encryptor.MD5Hash(e.contraseña);
+            // e.contraseÃ±a = Encryptor.MD5Hash(e.contraseÃ±a);
 
             using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
             {
-                String sql = String.Format("INSERT INTO encargado VALUES ({0}, '{1}', '{2}', '{3}', {4})", e.id, e.nombre, e.nombre_usuario, e.contraseña, e.is_admin ? 1:0);
+                String sql = String.Format("INSERT INTO encargado VALUES ({0}, '{1}', '{2}', '{3}', {4})", e.id, e.nombre, e.nombre_usuario, e.contraseÃ±a, e.is_admin ? 1:0);
 
                 using (SqlCommand command = new SqlCommand(sql, connection))
                 {
@@ -149,6 +153,7 @@ namespace AccesoDatos
         }
 
 
+        // MÃ©todo que borra un encargado por su id
         public static bool Delete(int id)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -178,6 +183,7 @@ namespace AccesoDatos
             }
         }
 
+        // MÃ©todo que actualiza un encargado
         public static bool Update(Encargado e)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -187,7 +193,7 @@ namespace AccesoDatos
 
             using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
             {
-                String sql = String.Format("UPDATE encargado SET nombre='{0}', Nombre_de_usuario='{1}', contraseña='{2}', es_admin={3} WHERE id={4}", e.nombre, e.nombre_usuario, e.contraseña, e.is_admin ? 1:0, e.id);
+                String sql = String.Format("UPDATE encargado SET nombre='{0}', Nombre_de_usuario='{1}', contraseÃ±a='{2}', es_admin={3} WHERE id={4}", e.nombre, e.nombre_usuario, e.contraseÃ±a, e.is_admin ? 1:0, e.id);
 
                 using (SqlCommand command = new SqlCommand(sql, connection))
                 {
