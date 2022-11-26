@@ -12,6 +12,7 @@ namespace AccesoDatos
 
         public static SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
 
+        // Método que devuelve todos los departamentos
         public static List<Departamento> GetAll()
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -45,6 +46,7 @@ namespace AccesoDatos
             return lista;
         }
 
+        // Método que devuelve un departamento por su id
         public static Departamento GetById(long id)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -77,6 +79,7 @@ namespace AccesoDatos
             return null;
         }
 
+        // Método que devuelve una lista de departamentos por su nombre
         public static List<Departamento> GetByName(string name)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -109,6 +112,7 @@ namespace AccesoDatos
             return lista;
         }
 
+        // Método que crea un departamento
         public static bool Create(Departamento e)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -138,6 +142,7 @@ namespace AccesoDatos
             }
         }
 
+        // Método que borra un departamento por su id
         public static bool Delete(int id)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -167,6 +172,7 @@ namespace AccesoDatos
             }
         }
 
+        // Método que actualiza un departamento
         public static bool Update(Departamento e)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
