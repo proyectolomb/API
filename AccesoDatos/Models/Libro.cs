@@ -18,6 +18,7 @@ namespace AccesoDatos
 
         public static SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
         
+        // Método que devuelve una lista con todos los libros
         public static List<Libro> GetAll()
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -105,6 +106,7 @@ namespace AccesoDatos
             }
         }
 
+        // Método que crea un libro
         public static bool Create(Libro libro)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -171,6 +173,7 @@ namespace AccesoDatos
             }
         }
 
+        // Método que devuelve un libro por su isbn
         public static Libro GetByISBN(string isbn)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
