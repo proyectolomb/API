@@ -12,6 +12,7 @@ namespace AccesoDatos
 
         public static SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
 
+        // Método que devuelve todos los idiomas
         public static List<Idioma> GetAll()
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -45,6 +46,7 @@ namespace AccesoDatos
             return lista;
         }
 
+        // Método que devuelve un idioma por su id
         public static Idioma GetById(long id)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -77,6 +79,7 @@ namespace AccesoDatos
             return null;
         }
 
+        // Método que devuelve una lista de idiomas por su nombre
         public static List<Idioma> GetByName(string name)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -109,6 +112,7 @@ namespace AccesoDatos
             return lista;
         }
 
+        // Método que crea un idioma
         public static bool Create(Idioma e)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -138,6 +142,7 @@ namespace AccesoDatos
             }
         }
 
+        // Método que borra un idioma por su id
         public static bool Delete(int id)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -167,6 +172,7 @@ namespace AccesoDatos
             }
         }
 
+        // Método que actualiza un idioma
         public static bool Update(Idioma e)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
