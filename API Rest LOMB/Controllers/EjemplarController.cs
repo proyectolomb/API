@@ -10,6 +10,7 @@ using Microsoft.Extensions.Logging;
 
 namespace API_Rest_LOMB.Controllers
 {
+    // Ruta base api/v1/ejemplar
     [Route("api/v1/[controller]")]
     [ApiController]
     public class EjemplarController : ControllerBase
@@ -21,7 +22,9 @@ namespace API_Rest_LOMB.Controllers
             _logger = logger;
 
         }
-
+        
+        
+        // api/v1/ejemplar/byisbn/123123123
         [HttpGet("byisbn/{isbn}")]
         public IActionResult GetByISBN(string isbn)
         {
@@ -30,7 +33,7 @@ namespace API_Rest_LOMB.Controllers
         }
 
 
-
+        // api/v1/ejemplar
         [HttpGet]
         public IActionResult GetAll()
         {
