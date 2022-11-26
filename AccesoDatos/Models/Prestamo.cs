@@ -17,6 +17,7 @@ namespace AccesoDatos.Models
 
         public static SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
 
+        // Método que devuelve una lista con todos los préstamos
         public static List<Prestamo> GetAll()
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
@@ -120,6 +121,7 @@ namespace AccesoDatos.Models
             return lista;
         }
 
+        // Método auxiliar para asignar un curso o un departamento
         public static string getCursoOrDepartamento()
         {
             var seed = Environment.TickCount;
@@ -143,6 +145,7 @@ namespace AccesoDatos.Models
             return "1º SMR";
         }
 
+        // Método que borra un préstamo por su id
         public static bool Delete(string id)
         {
             builder.DataSource = "C02PC15\\SQLEXPRESS";
