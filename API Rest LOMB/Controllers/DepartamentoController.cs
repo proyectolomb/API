@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace API_Rest_LOMB.Controllers
 {
+    // Ruta base api/v1/departamento
     [Route("api/v1/[controller]")]
     [ApiController]
     public class DepartamentoController : ControllerBase
@@ -21,7 +22,8 @@ namespace API_Rest_LOMB.Controllers
             _logger = logger;
 
         }
-
+        
+        // api/v1/departamento/byname?name=x
         [HttpGet("byname")]
         public IActionResult GetByName()
         {
@@ -29,6 +31,7 @@ namespace API_Rest_LOMB.Controllers
             return Ok(JsonConvert.SerializeObject(Departamentos, Formatting.None, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, Formatting = Formatting.Indented }));
         }
 
+        // api/v1/departamento
         [HttpGet]
         public IActionResult GetAll()
         {
@@ -36,6 +39,7 @@ namespace API_Rest_LOMB.Controllers
             return Ok(JsonConvert.SerializeObject(list, Formatting.None, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore, Formatting = Formatting.Indented }));
         }
 
+        // api/v1/departamento/1
         [HttpGet("{id}")]
         public IActionResult GetById(long id)
         {
@@ -44,6 +48,7 @@ namespace API_Rest_LOMB.Controllers
             else return BadRequest("ID no válido");
         }
 
+        // api/v1/departamento/create
         [HttpPost("create")]
         public async Task<bool> Create()
         {
@@ -52,12 +57,14 @@ namespace API_Rest_LOMB.Controllers
             return AccesoDatos.Departamento.Create(departamento);
         }
 
+        // api/v1/departamento/delete/1
         [HttpDelete("delete/{id}")]
         public bool Delete(int id)
         {
             return AccesoDatos.Departamento.Delete(id);
         }
 
+        // api/v1/departamento/update/1
         [HttpPut("update/{id}")]
         public async Task<bool> Update(int id)
         {
