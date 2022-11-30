@@ -10,7 +10,7 @@ namespace AccesoDatos
     {
         public int id;
         public string nombre;
-        public string paisOrigen;
+        public string pais_origen;
         public List<Categoria> categorias;  
         public Editorial editorial;
         
@@ -40,14 +40,89 @@ namespace AccesoDatos
                             {
                                 id = reader.GetInt32(0),
                                 nombre = reader.GetString(1),
-
+                                pais_origen = getPaisOrigen(),
+                                categorias = getCategorias(),
+                                editorial = getEditorial()
+                                    
                             };
+
                             lista.Add(d);
                         }
                     }
                 }
             }
             return lista;
+        }
+        public static Editorial getEditorial()
+        {
+            var seed = Environment.TickCount;
+            var random = new Random(seed);
+            var value = random.Next(0, 2);
+            switch (value)
+            {
+                case 0:
+                    return new Editorial { id = 1, nombre="Alfajara" };
+                case 1:
+                    return null;
+            }
+            return null;
+        }
+
+        public static string getPaisOrigen()
+        {
+            var seed = Environment.TickCount;
+            var random = new Random(seed);
+            var value = random.Next(0, 5);
+            switch (value)
+            {
+                case 0:
+                    return "Brasil";
+                case 1:
+                    return "España";
+                case 2:
+                    return "Argentina";
+                case 3:
+                    return "Francia";
+                case 4:
+                    return "Japón";
+                case 5:
+                    return "Inglaterra";
+            }
+            return "China";
+        }
+
+        public static List<Categoria> getCategorias()
+        {
+            var seed = Environment.TickCount;
+            var random = new Random(seed);
+            var value = random.Next(0, 5);
+            List<Categoria> a = new List<Categoria>();
+            switch (value)
+            {
+                case 0:
+                    a.Add(new Categoria { id = 1, nombre = "Terror" });
+                    a.Add(new Categoria{id = 2, nombre = "Acción"});
+                    break; 
+                case 1:
+                    a.Add(new Categoria{ id = 2, nombre = "Acción" });
+                    break;
+                case 2:
+                    a.Add(new Categoria{ id = 3, nombre = "Acción" });
+                    break;
+                case 3:
+                    a.Add(new Categoria{ id = 1, nombre = "Terror" });
+                    a.Add(new Categoria{ id = 2, nombre = "Acción" });
+                    a.Add(new Categoria{ id = 3, nombre = "Aventura" });
+                    break;
+                case 4:
+                    a.Add(new Categoria{ id = 3, nombre = "Aventura" });
+                    break;
+                case 5:
+                    a.Add(new Categoria{ id = 3, nombre = "Aventura" });
+                    a.Add(new Categoria{ id = 2, nombre = "Acción" });
+                    break;
+            }
+            return a;
         }
 
         public static Autor GetById(long id)

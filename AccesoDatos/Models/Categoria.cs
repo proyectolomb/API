@@ -11,6 +11,10 @@ namespace AccesoDatos.Models
         public string nombre;
 
         public static SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+        private int v1;
+        private string v2;
+
+       
 
         public static List<Categoria> GetAll()
         {

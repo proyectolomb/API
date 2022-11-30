@@ -11,6 +11,9 @@ namespace AccesoDatos
         public string nombre { get; set; }
 
         public static SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+        private int v1;
+        private string v2;
+
 
         public static List<Editorial> GetAll()
         {
